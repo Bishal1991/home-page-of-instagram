@@ -72,7 +72,6 @@ class demoClass extends StatelessWidget {
               ),
               
               Expanded(
-
                 child: SingleChildScrollView(
                   scrollDirection: Axis.vertical,
                   child: Column(
@@ -94,14 +93,46 @@ class demoClass extends StatelessWidget {
                           Stack(
                             children: [
                               Container(
-                                height: 450,
-                                width: 450,
+                               // height: 450,
+                                //width: 450,
                                 color: Colors.black26,
-                                child: Image.network('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.RNTfpMV8lRsI44gF0RlzaAHaEo%3Fr%3D0%26pid%3DApi&f=1&ipt=7266c019156317ed23a9b8404b4706d61d75c494b5c3de308f3d24c38b71d03d&ipo=images', fit: BoxFit.contain,),
+                                child: AspectRatio(
+                                    aspectRatio: 4/5,
+                                    child: Image.network('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.RNTfpMV8lRsI44gF0RlzaAHaEo%3Fr%3D0%26pid%3DApi&f=1&ipt=7266c019156317ed23a9b8404b4706d61d75c494b5c3de308f3d24c38b71d03d&ipo=images', fit: BoxFit.cover,)),
                               ),
-                              CircleAvatar(
-                                backgroundImage: NetworkImage('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.RNTfpMV8lRsI44gF0RlzaAHaEo%3Fr%3D0%26pid%3DApi&f=1&ipt=7266c019156317ed23a9b8404b4706d61d75c494b5c3de308f3d24c38b71d03d&ipo=images'),
-                                radius: 20,
+                              Positioned(
+                                top: 9,
+                                left: 60,
+                                child: Row(
+                                  //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Text("Lelouch", style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.w900),),
+                                        Text("suggested for you", style: TextStyle(color: Colors.white, fontWeight: FontWeight.w400),)
+                                      ],
+                                    ),
+                                    SizedBox(width: 110,),
+                                    OutlinedButton(
+                                        style: OutlinedButton.styleFrom(
+                                          shape: RoundedRectangleBorder(
+                                            borderRadius: BorderRadius.circular(10),
+
+                                          )
+                                        ),
+                                        onPressed: (){}, 
+                                        child: Text("Follow", style: TextStyle(color: Colors.black, fontSize: 13, fontWeight: FontWeight.w900), )),
+                                    IconButton(onPressed: (){}, icon: Icon(Icons.menu_outlined), color: Colors.black,)
+                                  ],
+                                ),
+                              ),
+                              Container(
+                                margin: EdgeInsets.all(9),
+                                child: CircleAvatar(
+                                  backgroundImage: NetworkImage('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.RNTfpMV8lRsI44gF0RlzaAHaEo%3Fr%3D0%26pid%3DApi&f=1&ipt=7266c019156317ed23a9b8404b4706d61d75c494b5c3de308f3d24c38b71d03d&ipo=images'),
+                                  radius: 20,
+                                ),
                               ),
                             ],
                           ),
@@ -135,9 +166,12 @@ class demoClass extends StatelessWidget {
                                 color: Colors.black26,
                                 child: Image.network('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.RNTfpMV8lRsI44gF0RlzaAHaEo%3Fr%3D0%26pid%3DApi&f=1&ipt=7266c019156317ed23a9b8404b4706d61d75c494b5c3de308f3d24c38b71d03d&ipo=images', fit: BoxFit.contain,),
                               ),
-                              CircleAvatar(
-                                backgroundImage: NetworkImage('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.RNTfpMV8lRsI44gF0RlzaAHaEo%3Fr%3D0%26pid%3DApi&f=1&ipt=7266c019156317ed23a9b8404b4706d61d75c494b5c3de308f3d24c38b71d03d&ipo=images'),
-                                radius: 20,
+                              Container(
+                                margin: EdgeInsets.all(9),
+                                child: CircleAvatar(
+                                  backgroundImage: NetworkImage('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.RNTfpMV8lRsI44gF0RlzaAHaEo%3Fr%3D0%26pid%3DApi&f=1&ipt=7266c019156317ed23a9b8404b4706d61d75c494b5c3de308f3d24c38b71d03d&ipo=images'),
+                                  radius: 20,
+                                ),
                               ),
                             ],
                           ),
@@ -171,9 +205,12 @@ class demoClass extends StatelessWidget {
                                 color: Colors.black26,
                                 child: Image.network('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.RNTfpMV8lRsI44gF0RlzaAHaEo%3Fr%3D0%26pid%3DApi&f=1&ipt=7266c019156317ed23a9b8404b4706d61d75c494b5c3de308f3d24c38b71d03d&ipo=images', fit: BoxFit.contain,),
                               ),
-                              CircleAvatar(
-                                backgroundImage: NetworkImage('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.RNTfpMV8lRsI44gF0RlzaAHaEo%3Fr%3D0%26pid%3DApi&f=1&ipt=7266c019156317ed23a9b8404b4706d61d75c494b5c3de308f3d24c38b71d03d&ipo=images'),
-                                radius: 20,
+                              Container(
+                                margin: EdgeInsets.all(9),
+                                child: CircleAvatar(
+                                  backgroundImage: NetworkImage('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.RNTfpMV8lRsI44gF0RlzaAHaEo%3Fr%3D0%26pid%3DApi&f=1&ipt=7266c019156317ed23a9b8404b4706d61d75c494b5c3de308f3d24c38b71d03d&ipo=images'),
+                                  radius: 20,
+                                ),
                               ),
                             ],
                           ),
@@ -207,9 +244,12 @@ class demoClass extends StatelessWidget {
                                 color: Colors.black26,
                                 child: Image.network('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.RNTfpMV8lRsI44gF0RlzaAHaEo%3Fr%3D0%26pid%3DApi&f=1&ipt=7266c019156317ed23a9b8404b4706d61d75c494b5c3de308f3d24c38b71d03d&ipo=images', fit: BoxFit.contain,),
                               ),
-                              CircleAvatar(
-                                backgroundImage: NetworkImage('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.RNTfpMV8lRsI44gF0RlzaAHaEo%3Fr%3D0%26pid%3DApi&f=1&ipt=7266c019156317ed23a9b8404b4706d61d75c494b5c3de308f3d24c38b71d03d&ipo=images'),
-                                radius: 20,
+                              Container(
+                                margin: EdgeInsets.all(9),
+                                child: CircleAvatar(
+                                  backgroundImage: NetworkImage('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.RNTfpMV8lRsI44gF0RlzaAHaEo%3Fr%3D0%26pid%3DApi&f=1&ipt=7266c019156317ed23a9b8404b4706d61d75c494b5c3de308f3d24c38b71d03d&ipo=images'),
+                                  radius: 20,
+                                ),
                               ),
                             ],
                           ),
